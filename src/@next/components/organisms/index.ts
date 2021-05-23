@@ -19,6 +19,7 @@ export * from "./AddressGridSelector";
 export * from "./StripeCreditCardForm";
 export * from "./BraintreePaymentGateway";
 export * from "./DummyPaymentGateway";
+export * from "./DummyPaymentGatewayNalojenPlatej";
 export * from "./StripePaymentGateway";
 export * from "./PaymentGatewaysList";
 export * from "./CheckoutAddress";

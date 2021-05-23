@@ -6,6 +6,7 @@ import { PROVIDERS } from "@temp/core/config";
 import {
   BraintreePaymentGateway,
   DummyPaymentGateway,
+  DummyPaymentGatewayNalojenPlatej,
   StripePaymentGateway,
   AdyenPaymentGateway,
 } from "..";
@@ -83,12 +84,14 @@ const PaymentGatewaysList: React.FC<IProps> = ({
                     customLabel
                   >
                     <span data-test="checkoutPaymentGatewayDummyName">
-                      {name}
+                      {/* {name} */} Наложен платеж
                     </span>
                   </Radio>
                 </S.Tile>
                 {checked && (
-                  <DummyPaymentGateway
+                  // <DummyPaymentGateway
+                  <DummyPaymentGatewayNalojenPlatej
+
                     formRef={formRef}
                     formId={formId}
                     processPayment={token => processPayment(id, token)}
