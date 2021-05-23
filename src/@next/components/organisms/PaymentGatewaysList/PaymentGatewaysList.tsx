@@ -5,7 +5,7 @@ import { PROVIDERS } from "@temp/core/config";
 
 import {
   BraintreePaymentGateway,
-  DummyPaymentGateway,
+  // DummyPaymentGateway,
   DummyPaymentGatewayNalojenPlatej,
   StripePaymentGateway,
   AdyenPaymentGateway,
@@ -91,7 +91,6 @@ const PaymentGatewaysList: React.FC<IProps> = ({
                 {checked && (
                   // <DummyPaymentGateway
                   <DummyPaymentGatewayNalojenPlatej
-
                     formRef={formRef}
                     formId={formId}
                     processPayment={token => processPayment(id, token)}

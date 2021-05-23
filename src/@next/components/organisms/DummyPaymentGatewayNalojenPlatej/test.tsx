@@ -32,7 +32,10 @@ describe("<DummyPaymentGatewayNalojenPlatej />", () => {
 
     const processPayment = jest.fn().mockResolvedValueOnce({});
     const wrapper = mount(
-      <DummyPaymentGatewayNalojenPlatej formRef={formRef} processPayment={processPayment} />
+      <DummyPaymentGatewayNalojenPlatej
+        formRef={formRef}
+        processPayment={processPayment}
+      />
     );
 
     const input = wrapper.find("input").at(0);
