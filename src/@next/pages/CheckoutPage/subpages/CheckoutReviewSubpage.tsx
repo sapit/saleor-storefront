@@ -60,12 +60,15 @@ const CheckoutReviewSubpageWithRef: RefForwardingComponent<
     : undefined;
 
   const getPaymentMethodDescription = () => {
+    // if (payment?.gateway === "mirumee.payments.dummy") {
+    //   return `Dummy: ${
+    //     dummyStatuses.find(
+    //       status => status.token === selectedPaymentGatewayToken
+    //     )?.label
+    //   }`;
+    // }
     if (payment?.gateway === "mirumee.payments.dummy") {
-      return `Dummy: ${
-        dummyStatuses.find(
-          status => status.token === selectedPaymentGatewayToken
-        )?.label
-      }`;
+      return `Наложен платеж`;
     }
     if (payment?.gateway === "mirumee.payments.adyen") {
       return `Adyen payments`;

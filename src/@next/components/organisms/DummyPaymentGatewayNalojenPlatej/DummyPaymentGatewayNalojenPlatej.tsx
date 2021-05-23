@@ -6,7 +6,7 @@ import { Radio } from "@components/atoms";
 import * as S from "./styles";
 import { IProps } from "./types";
 
-export const statuses = [
+export const statuses_np = [
   { token: "charged", label: "Charged" },
   // { token: "fully-refunded", label: "Fully refunded" },
   // { token: "not-charged", label: "Not charged" },
@@ -23,7 +23,7 @@ const DummyPaymentGatewayNalojenPlatej: React.FC<IProps> = ({
 }: IProps) => {
   return (
     <Formik
-      initialValues={{ status: initialStatus || statuses[0].token }}
+      initialValues={{ status: initialStatus || statuses_np[0].token }}
       onSubmit={(values, { setSubmitting }) => {
         processPayment(values.status);
         setSubmitting(false);
@@ -43,7 +43,7 @@ const DummyPaymentGatewayNalojenPlatej: React.FC<IProps> = ({
           onSubmit={handleSubmit}
           data-test="DummyPaymentGatewayNalojenPlatejForm"
         >
-          {statuses.map(({ token, label }) => {
+          {statuses_np.map(({ token, label }) => {
             return (
               <S.Status key={token}>
                 <Radio

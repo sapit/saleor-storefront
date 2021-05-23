@@ -16,6 +16,7 @@ describe("<DummyPaymentGatewayNalojenPlatej />", () => {
     const wrapper = mount(
       <DummyPaymentGatewayNalojenPlatej processPayment={processPayment} />
     );
+
     expect(wrapper.exists()).toEqual(true);
     expect(wrapper.text()).toContain(statuses[0].label);
     expect(wrapper.text()).toContain(statuses[1].label);
